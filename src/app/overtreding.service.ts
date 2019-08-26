@@ -28,7 +28,7 @@ export class OvertredingService {
     this.snelheidList = [];
     let snelheids = this.getAll();
     for(let snel of snelheids){
-    if(number >= snel.aantal_overtredingen_snelheid){
+    if(number <= snel.aantal_overtredingen_snelheid){
       this.snelheidList.push(snel);
     }
   }
