@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import doc from '../overtredingen.json';
+import * as data from '../overtredingen.json';
 
 @Injectable({
   providedIn: 'root'
@@ -11,17 +11,17 @@ export class OvertredingService {
 
 
   getPlaats(str) {
-    console.log(doc);
-    let ind = doc.docs.findIndex(item => { return item.opnameplaats_straat == str });
+    console.log(data);
+    let ind = data.docs.findIndex(item => { return item.opnameplaats_straat == str });
     if (ind == null) {
     }
     else {
-      return doc.docs[ind];
+      return data.docs[ind];
     }
 }
 
   getAll() {
-    return doc.docs;
+    return data.docs;
   }
 
   getAantal(number){
