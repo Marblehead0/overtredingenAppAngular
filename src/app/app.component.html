@@ -13,10 +13,9 @@
     </h2>
   </div>
   
-
-  <h2>Zoek aantal overtredingen op snelheid</h2>
+  <h2>Zoek aantal snelheids overtredingen</h2>
   <div>
-    Snelheid: <input type="number" [(ngModel)]="snelheid"><br>
+    Aantal overtredingen: <input type="number" [(ngModel)]="snelheid"><br>
     <input type="submit" value="Get" (click)="getAantal()"><br><br>
     <h2 *ngFor="let item of snelheidList;">
       datum vaststelling: {{item.datum_vaststelling}}<br>
